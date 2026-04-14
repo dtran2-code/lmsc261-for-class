@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is my website</h1>
+
+    <script>
+        let theBody = document.querySelector("body");
+
+        function handleKeyUp(event){
+            if (event.code === "Space"){
+                theBody.style.backgroundColor = "red";
+            }
+        }
+
+        function handleKeyDown(event){
+            if (event.code === "Space"){
+                theBody.style.backgroundColor = "blue";
+            }
+        }
+
+        window.addEventListener("keyup",handleKeyUp);
+        window.addEventListener("keydown", handleKeyDown);
+        //when you make a website...keep a separate folder for images and audio
+        //use javascript to link up the images with the audio
+    </script>
+</body>
+</html>
+

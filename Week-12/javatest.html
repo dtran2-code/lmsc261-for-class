@@ -11,8 +11,9 @@
     <button id="dontClickMe">don't click me</button>
     <p class="paraStyle">Paragraph</p>
     <p class="paraStyle">Second Paragraph</p>
-
-
+    <button id="bbutton">click me!</button>
+    <button id="redbutton">click clock</button>
+    <button id="bluebutton">click clock</button>
 
 
     <script>
@@ -21,6 +22,38 @@
         myButton.style.backgroundColor = "red";
         myButton.style.color = "white";
         myButton.textContent = "DANGER";
+
+        function changePageColorBlue(){
+            let body = document.querySelector("body");
+            body.style.backgroundColor = "blue";
+
+        }
+
+        function changePageColorRed(){
+            let body = document.querySelector("body");
+            body.style.backgroundColor = "red";
+        }
+        let bbutton = document.querySelector("#bbutton");
+       
+        function handleClick(){
+            alert("There's been a click!!!");
+        }
+        bbutton.addEventListener("click",handleClick);
+
+        let redbutton = document.getElementById("redbutton");
+        let bluebutton = document.getElementById("bluebutton");
+
+        redbutton.addEventListener("click", changePageColorRed);
+        bluebutton.addEventListener("click", changePageColorBlue);
+
+        redbutton.addEventListener("mouseover", changePageColorRed);
+        bluebutton.addEventListener("mouseover", changePageColorBlue);
+
+        function showSecret(){
+            let secret = document.getElementById("secretDiv");
+            secret.textContext = "Fiona123";
+            
+        }
 
     </script>
 </body>
